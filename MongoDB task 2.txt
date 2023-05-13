@@ -1,0 +1,400 @@
+/// MongoDB task 2
+
+
+db.users.insertMany([
+    {
+        name:"mohan",
+email : "mohan@gmail.com" ,
+ phoneno : 9999999999 ,
+  address : "abc"
+  },
+  {
+    name:"devesh",
+  email:"dev@gmail.com",
+  phoneno:8888888888,
+  address:"def"
+  },
+  {
+    name:"suresh",
+    email:"suresh@gmail.com",
+    phoneno:7777777777,
+    address:"ghi"
+  },
+  {
+    name:"jai",
+    email:"jai@gmail.com",
+    phoneno:6666666666,
+    address:"jkl"
+  },
+  {
+    name:"gopi",
+    email:"gopi@gmail.com",
+    phoneno:5555555555,
+    address:"mno"
+  }
+  ])
+  
+  
+  
+  //////////////////////////codeketa
+  
+  db.codekata.insertMany([
+    {
+        _id :   ObjectId("638ee9d2621eedb7a28d4e63"),
+        no_of_problems_completed : 35
+  },
+  {
+        _id :   ObjectId("638ee9d2621eedb7a28d4e64"),
+        no_of_problems_completed : 78
+  },
+  {
+    _id :  ObjectId("638ee9d2621eedb7a28d4e65"),
+       no_of_problems_completed : 120
+  },
+  {
+    _id :  ObjectId("638ee9d2621eedb7a28d4e66"),
+       no_of_problems_completed : 58
+  },
+  {
+     _id:  ObjectId("638ee9d2621eedb7a28d4e67"),
+     no_of_problems_completed:400
+  }
+  ])
+  
+  
+  ///////////////////////////attendance
+  
+   db.attendance.insertMany([
+    {
+         _id :  ObjectId("638ee9d2621eedb7a28d4e63"),
+         present_days : ["15-oct-2020","16-oct-2020","17-oct-2020","18-oct-2020","19-oct-2020","20-oct-2020","21-oct-2020","22-oct-2020","23-oct-2020","24-oct-2020","25-oct-2020","26-oct-2020","27-oct-2020","28-oct-2020","29-oct-2020","30-oct-2020","31-oct-2020"],
+         attendance : "60%"
+
+  },
+  {
+         _id :ObjectId("638ee9d2621eedb7a28d4e64") ,
+         present_days : ["15-oct-2020","17-oct-2020","18-oct-2020","19-oct-2020","20-oct-2020","21-oct-2020","22-oct-2020","23-oct-2020","24-oct-2020","25-oct-2020","26-oct-2020","27-oct-2020","28-oct-2020","29-oct-2020","30-oct-2020","31-oct-2020"],
+         attendance : "90%"
+
+  },
+  {
+         _id :   ObjectId("638ee9d2621eedb7a28d4e65"),
+         present_days : ["15-oct-2020","16-oct-2020","17-oct-2020","18-oct-2020","19-oct-2020","20-oct-2020","21-oct-2020","22-oct-2020","23-oct-2020","24-oct-2020","27-oct-2020","28-oct-2020","29-oct-2020","30-oct-2020","31-oct-2020"],
+         attendance : "100%"
+
+  },
+   {
+         _id :   ObjectId ("638ee9d2621eedb7a28d4e66"),
+         present_days : ["15-oct-2020","16-oct-2020","17-oct-2020","18-oct-2020","19-oct-2020","20-oct-2020","21-oct-2020","22-oct-2020","23-oct-2020","24-oct-2020","25-oct-2020","26-oct-2020","27-oct-2020","28-oct-2020","29-oct-2020","30-oct-2020","31-oct-2020"],
+         attendance : "50%"
+
+  },
+  {
+     _id: ObjectId("638ee9d2621eedb7a28d4e67"),
+     present_days : ["15-oct-2020","16-oct-2020","17-oct-2020","18-oct-2020","19-oct-2020","20-oct-2020","21-oct-2020","22-oct-2020","23-oct-2020","24-oct-2020","25-oct-2020","26-oct-2020","27-oct-2020","28-oct-2020"],
+     attendance:"80%"
+  }
+  ])
+  
+
+
+////////////////////////////////topics
+
+
+    db.topics.insertMany([
+     {
+topic_name : "components",
+present_students : [  ObjectId("638ee9d2621eedb7a28d4e67"),ObjectId("638ee9d2621eedb7a28d4e63"),ObjectId("638ee9d2621eedb7a28d4e65") ],
+absent_students : [ ObjectId("638ee9d2621eedb7a28d4e64"),ObjectId("638ee9d2621eedb7a28d4e66")],
+date : new ISODate("2020-09-20T14:10:30Z")
+  }
+  ,
+  {
+topic_name : "useState",
+present_students : [  ObjectId("638ee9d2621eedb7a28d4e63"),
+		ObjectId("638ee9d2621eedb7a28d4e64"),
+		ObjectId("638ee9d2621eedb7a28d4e65")],
+absent_students : [ObjectId("638ee9d2621eedb7a28d4e66"),
+		ObjectId("638ee9d2621eedb7a28d4e67")],
+date :  new ISODate("2020-10-11T14:10:30Z")
+  },
+  {
+topic_name : "useParams",
+present_students : [ObjectId("638ee9d2621eedb7a28d4e66"),
+		ObjectId("638ee9d2621eedb7a28d4e67")],
+absent_students:[ObjectId("638ee9d2621eedb7a28d4e63"),
+		ObjectId("638ee9d2621eedb7a28d4e64"),
+		ObjectId("638ee9d2621eedb7a28d4e65")],
+date :new ISODate("2020-10-12T14:10:30Z")
+  },
+  {
+    topic_name : "useEffect",
+present_students : [ObjectId("638ee9d2621eedb7a28d4e64"), ObjectId("638ee9d2621eedb7a28d4e66")],
+absent_students : [ObjectId("638ee9d2621eedb7a28d4e63"), ObjectId("638ee9d2621eedb7a28d4e65"), ObjectId("638ee9d2621eedb7a28d4e67")],
+date :new ISODate("2020-10-15T14:10:30Z")
+ 
+  },
+  {
+    topic_name:"axios",
+    present_students :[ObjectId("638ee9d2621eedb7a28d4e63"),ObjectId("638ee9d2621eedb7a28d4e64")],
+    absent_students : [ObjectId("638ee9d2621eedb7a28d4e65"),ObjectId("638ee9d2621eedb7a28d4e66"),ObjectId("638ee9d2621eedb7a28d4e67")],
+    date :new ISODate("2020-09-18T14:10:30Z")
+  }])
+
+
+///////////////////////////////////////////////task
+
+db.tasks.insertMany([
+{
+  topic : "components",
+  task_name:"create a component container to display a div" , 
+  completed_students :[ObjectId("638ee9d2621eedb7a28d4e63"),ObjectId]("638ee9d2621eedb7a28d4e65"),
+  not_completed_students : [ ObjectId("638ee9d2621eedb7a28d4e64"),ObjectId("638ee9d2621eedb7a28d4e66"),ObjectId("638ee9d2621eedb7a28d4e67")],
+  
+},
+{
+  topic : "useState",
+  task_name:"change the price of a product using useState",
+  completed_students :[ObjectId("638ee9d2621eedb7a28d4e66"),ObjectId("638ee9d2621eedb7a28d4e64"),ObjectId("638ee9d2621eedb7a28d4e63")] , 
+  not_completed_students:[ObjectId("638ee9d2621eedb7a28d4e65"), ObjectId("638ee9d2621eedb7a28d4e67")]
+},
+{
+    topic:"useParams",
+    task_name:"display various parameters from useParams",
+     completed_students :[ ObjectId("638ee9d2621eedb7a28d4e64")],
+     not_completed_students : [ObjectId("638ee9d2621eedb7a28d4e63"), ObjectId("638ee9d2621eedb7a28d4e66"), ObjectId("638ee9d2621eedb7a28d4e65"),ObjectId("638ee9d2621eedb7a28d4e67")],
+},
+{
+    topic:"useEffect",
+    task_name:"fetch an api using fetch() and call the function inside useEffect",
+    completed_students:[ObjectId("638ee9d2621eedb7a28d4e65"),ObjectId("638ee9d2621eedb7a28d4e66")],
+    not_completed_students : [ ObjectId("638ee9d2621eedb7a28d4e63"),ObjectId("638ee9d2621eedb7a28d4e64"),ObjectId("638ee9d2621eedb7a28d4e67")],
+},
+{
+    topic:"axios",
+    task_name:"Do the previous task using axios",
+    completed_students:[ ObjectId("638ee9d2621eedb7a28d4e65"), ObjectId("638ee9d2621eedb7a28d4e66"),ObjectId("638ee9d2621eedb7a28d4e67")],
+    not_completed_students : [ObjectId("638ee9d2621eedb7a28d4e63"), ObjectId("638ee9d2621eedb7a28d4e64")]
+}
+
+])
+
+
+
+
+/////////////////////////////////////////////company drives
+
+
+
+db.company_drives.insertMany([
+    {
+        name : "Microsoft",
+        attended_students : [ObjectId("638ee9d2621eedb7a28d4e66"),ObjectId("638ee9d2621eedb7a28d4e65")],
+        date : new ISODate("2020-10-18T14:10:30Z")
+    },
+    {
+        name : "Google",
+        attended_students :[ObjectId("638ee9d2621eedb7a28d4e67")],
+         date : new ISODate("2020-09-15T14:10:30Z")
+    },
+    {
+        name : "freshWorks",
+        attended_students:[ObjectId("638ee9d2621eedb7a28d4e63"),ObjectId("638ee9d2621eedb7a28d4e64")],
+        date : new ISODate("2020-10-20T18:10:30Z")
+    },
+    {
+        name : "Zoho",
+        attended_students:[ObjectId("638ee9d2621eedb7a28d4e67"), ObjectId("638ee9d2621eedb7a28d4e63")],
+        date : new ISODate("2020-10-30T14:10:30Z")
+    }
+])
+
+
+
+
+//////////////////////////////////////mentors
+
+
+
+  db.mentors.insertMany([
+    {
+        name : "mentor1",
+        class_strength : 65
+    },
+    {
+        name : "mentor2",
+        class_strength:25
+    },
+    {
+        name:"mentor3",
+        class_strength:45
+    },
+    {
+        name:"mentor4",
+        class_strength:30
+    },
+    {
+        name:"mentor5",
+        class_strength:16
+    }
+])
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+///1. Find all the topics and tasks which are thought in the month of October
+
+
+db.topics.aggregate([
+  {
+    '$lookup': {
+      'from': 'tasks', 
+      'localField': 'topic_name', 
+      'foreignField': 'topic', 
+      'as': 'result'
+    }
+  }, {
+    '$match': {
+      'date': {
+        '$gt': new Date('Thu, 01 Oct 2020 14:10:30 GMT')
+      }
+    }
+  }, {
+    '$match': {
+      'date': {
+        '$lt': new Date('Sat, 31 Oct 2020 14:10:30 GMT')
+      }
+    }
+  }
+])
+
+
+
+
+
+//////////2. Find all the company drives which appeared between 15 oct-2020 and 31-oct-2020
+
+
+db.company_drives.aggregate([
+  {
+    '$match': {
+      'date': {
+        '$gt': new Date('Thu, 01 Oct 2020 14:10:30 GMT')
+      }
+    }
+  }, {
+    '$match': {
+      'date': {
+        '$lt': new Date('Sat, 31 Oct 2020 14:10:30 GMT')
+      }
+    }
+  }
+])
+
+
+
+
+
+////////////////3. Find all the company drives and students who are appeared for the placement.
+
+
+db.company_drives.aggregate([
+  {
+    '$lookup': {
+      'from': 'users', 
+      'localField': 'attended_students', 
+      'foreignField': '_id', 
+      'as': 'result'
+    }
+  }
+])
+
+
+
+/////////////////////////4. Find the number of problems solved by the user in codekata
+
+
+db.codekata.aggregate([
+  {
+    '$lookup': {
+      'from': 'users', 
+      'localField': '_id', 
+      'foreignField': 'no_of_problems_completed', 
+      'as': 'result'
+    }
+  }
+])
+
+
+
+
+
+
+/////////////////5. Find all the mentors with who has the mentee's count more than 15
+
+
+
+db.mentors.find({class_strength: {$gt:15}})
+
+
+
+
+///////////6. Find the number of users who are absent and task is not submitted  between 15 oct-2020 and 31-oct-2020
+
+
+
+db.topics.aggregate([
+  {
+    '$lookup': {
+      'from': 'topics', 
+      'localField': 'topic_name', 
+      'foreignField': 'absent_students', 
+      'as': 'task_status'
+    }
+  }, {
+    '$match': {
+      'date': {
+        '$gt': new Date('Thu, 15 Oct 2020 14:10:30 GMT')
+      }
+    }
+  }, {
+    '$match': {
+      'date': {
+        '$lt': new Date('Fri, 30 Oct 2020 14:10:30 GMT')
+      }
+    }
+  }
+])
+
+
+
+
+
+db.tasks.aggregate([
+  {
+    '$lookup': {
+      'from': 'topic', 
+      'localField': 'task_name', 
+      'foreignField': 'not_completed_students', 
+      'as': 'task_status'
+    }
+  }, {
+    '$match': {
+      'date': {
+        '$gt': new Date('Thu, 15 Oct 2020 14:10:30 GMT')
+      }
+    }
+  }, {
+    '$match': {
+      'date': {
+        '$lt': new Date('Fri, 30 Oct 2020 14:10:30 GMT')
+      }
+    }
+  }
+])
+
+
+
